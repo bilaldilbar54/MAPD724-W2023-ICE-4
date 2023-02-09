@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8520FA7F299470C800BD92E5 /* StartScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8520FA7E299470C800BD92E5 /* StartScene.swift */; };
+		8520FA82299478DD00BD92E5 /* EndScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8520FA81299478DD00BD92E5 /* EndScene.swift */; };
+		8520FA84299478EE00BD92E5 /* StartScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8520FA83299478EE00BD92E5 /* StartScene.sks */; };
+		8520FA862994791400BD92E5 /* EndScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8520FA852994791400BD92E5 /* EndScene.sks */; };
 		8591BB4A29946C2500ADC281 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8591BB4929946C2500ADC281 /* AppDelegate.swift */; };
 		8591BB4C29946C2500ADC281 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8591BB4B29946C2500ADC281 /* GameScene.sks */; };
 		8591BB5029946C2500ADC281 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8591BB4F29946C2500ADC281 /* GameScene.swift */; };
@@ -83,6 +87,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8520FA7E299470C800BD92E5 /* StartScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScene.swift; sourceTree = "<group>"; };
+		8520FA80299475B800BD92E5 /* MAPD724-W2023-ICE-4-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "MAPD724-W2023-ICE-4-Info.plist"; sourceTree = SOURCE_ROOT; };
+		8520FA81299478DD00BD92E5 /* EndScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndScene.swift; sourceTree = "<group>"; };
+		8520FA83299478EE00BD92E5 /* StartScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = StartScene.sks; sourceTree = "<group>"; };
+		8520FA852994791400BD92E5 /* EndScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = EndScene.sks; sourceTree = "<group>"; };
 		8591BB4629946C2500ADC281 /* MAPD724-W2023-ICE 4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MAPD724-W2023-ICE 4.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8591BB4929946C2500ADC281 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8591BB4B29946C2500ADC281 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -170,6 +179,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8520FA7D2994709C00BD92E5 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				8591BB4B29946C2500ADC281 /* GameScene.sks */,
+				8591BB4F29946C2500ADC281 /* GameScene.swift */,
+				8520FA7E299470C800BD92E5 /* StartScene.swift */,
+				8520FA81299478DD00BD92E5 /* EndScene.swift */,
+				8520FA83299478EE00BD92E5 /* StartScene.sks */,
+				8520FA852994791400BD92E5 /* EndScene.sks */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
 		8591BB3D29946C2500ADC281 = {
 			isa = PBXGroup;
 			children = (
@@ -189,13 +211,13 @@
 		8591BB4829946C2500ADC281 /* MAPD724-W2023-ICE 4 */ = {
 			isa = PBXGroup;
 			children = (
+				8520FA80299475B800BD92E5 /* MAPD724-W2023-ICE-4-Info.plist */,
+				8520FA7D2994709C00BD92E5 /* Scenes */,
 				8591BB6729946C5C00ADC281 /* Assets */,
 				8591BB6329946C5C00ADC281 /* Core */,
 				8591BBA529946C5C00ADC281 /* GameObjects */,
 				8591BB6029946C5C00ADC281 /* Managers */,
 				8591BB4929946C2500ADC281 /* AppDelegate.swift */,
-				8591BB4B29946C2500ADC281 /* GameScene.sks */,
-				8591BB4F29946C2500ADC281 /* GameScene.swift */,
 				8591BB5129946C2500ADC281 /* GameViewController.swift */,
 				8591BB5329946C2500ADC281 /* Main.storyboard */,
 				8591BB5629946C2700ADC281 /* Assets.xcassets */,
@@ -406,6 +428,7 @@
 				8591BBB229946C5C00ADC281 /* plane1.png in Resources */,
 				8591BBE329946C5C00ADC281 /* textureAtlas.json in Resources */,
 				8591BBB929946C5C00ADC281 /* ocean.gif in Resources */,
+				8520FA862994791400BD92E5 /* EndScene.sks in Resources */,
 				8591BBE129946C5C00ADC281 /* yay.mp3 in Resources */,
 				8591BBE729946C5C00ADC281 /* Dock51.ttf in Resources */,
 				8591BBD529946C5C00ADC281 /* explosion6.png in Resources */,
@@ -445,6 +468,7 @@
 				8591BBD029946C5C00ADC281 /* enemy3.png in Resources */,
 				8591BBE529946C5C00ADC281 /* dock51.woff in Resources */,
 				8591BBE429946C5C00ADC281 /* MailPilotDemoProject.tps in Resources */,
+				8520FA84299478EE00BD92E5 /* StartScene.sks in Resources */,
 				8591BBE029946C5C00ADC281 /* thunder.mp3 in Resources */,
 				8591BBDD29946C5C00ADC281 /* coin.wav in Resources */,
 				8591BBB129946C5C00ADC281 /* plane2.png in Resources */,
@@ -467,6 +491,8 @@
 				8591BBAE29946C5C00ADC281 /* Layer.swift in Sources */,
 				8591BBE929946C5C00ADC281 /* Cloud.swift in Sources */,
 				8591BBAB29946C5C00ADC281 /* CollisionManager.swift in Sources */,
+				8520FA82299478DD00BD92E5 /* EndScene.swift in Sources */,
+				8520FA7F299470C800BD92E5 /* StartScene.swift in Sources */,
 				8591BB5229946C2500ADC281 /* GameViewController.swift in Sources */,
 				8591BB4A29946C2500ADC281 /* AppDelegate.swift in Sources */,
 				8591BBAC29946C5C00ADC281 /* GameProtocol.swift in Sources */,
@@ -618,12 +644,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "MAPD724-W2023-ICE-4-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Mail Pilot";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.action-games";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -631,6 +659,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "ca.centennialcollege.MAPD724-W2023-ICE-4";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -645,12 +676,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "MAPD724-W2023-ICE-4-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Mail Pilot";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.action-games";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -658,6 +691,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "ca.centennialcollege.MAPD724-W2023-ICE-4";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

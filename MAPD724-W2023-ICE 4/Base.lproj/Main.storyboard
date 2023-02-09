@@ -7,6 +7,11 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Dock51.ttf">
+            <string>Dock51</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Game View Controller-->
         <scene sceneID="tXr-a1-R10">
@@ -16,36 +21,73 @@
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lives: 99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HMH-5r-NSX">
-                                <rect key="frame" x="20" y="77" width="102" height="29"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lives: 99" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HMH-5r-NSX">
+                                <rect key="frame" x="20" y="59" width="135" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="135" id="fUJ-ur-RNv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Dock51" family="Dock 51" pointSize="24"/>
                                 <color key="textColor" systemColor="systemYellowColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 99999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rg3-Dy-t0Y">
-                                <rect key="frame" x="254" y="77" width="156" height="29"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 99999" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rg3-Dy-t0Y">
+                                <rect key="frame" x="213" y="59" width="197" height="25"/>
+                                <fontDescription key="fontDescription" name="Dock51" family="Dock 51" pointSize="24"/>
                                 <color key="textColor" systemColor="systemYellowColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jkc-GH-9Rn">
+                                <rect key="frame" x="20" y="237" width="390" height="182"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="182" id="LLI-mA-n5Y"/>
+                                </constraints>
+                                <string key="text">Play
+Mail Pilot</string>
+                                <fontDescription key="fontDescription" name="Dock51" family="Dock 51" pointSize="80"/>
+                                <color key="textColor" systemColor="systemYellowColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F2J-o1-nXe">
+                                <rect key="frame" x="123" y="497" width="184" height="73"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="73" id="LQK-NV-T2h"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Start">
+                                    <fontDescription key="titleFontDescription" name="Dock51" family="Dock 51" pointSize="48"/>
+                                    <color key="baseForegroundColor" systemColor="systemYellowColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="StartButton_Pressed:" destination="BV1-FR-VrT" eventType="touchUpInside" id="J73-fG-62Z"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4qk-I5-YsI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="HMH-5r-NSX" firstAttribute="top" secondItem="4qk-I5-YsI" secondAttribute="top" constant="18" id="Fbz-aj-cz5"/>
-                            <constraint firstItem="Rg3-Dy-t0Y" firstAttribute="trailing" secondItem="3se-qz-xqx" secondAttribute="trailingMargin" id="Mmq-vZ-IjB"/>
-                            <constraint firstItem="HMH-5r-NSX" firstAttribute="leading" secondItem="3se-qz-xqx" secondAttribute="leadingMargin" id="e0L-Tc-nuA"/>
-                            <constraint firstItem="HMH-5r-NSX" firstAttribute="baseline" secondItem="Rg3-Dy-t0Y" secondAttribute="baseline" id="zxv-6g-haJ"/>
+                            <constraint firstItem="jkc-GH-9Rn" firstAttribute="centerX" secondItem="F2J-o1-nXe" secondAttribute="centerX" id="0ed-HR-Dim"/>
+                            <constraint firstItem="Rg3-Dy-t0Y" firstAttribute="trailing" secondItem="3se-qz-xqx" secondAttribute="trailingMargin" id="8eA-uC-DU5"/>
+                            <constraint firstItem="Rg3-Dy-t0Y" firstAttribute="leading" secondItem="HMH-5r-NSX" secondAttribute="trailing" constant="58" id="C42-w3-4pf"/>
+                            <constraint firstItem="F2J-o1-nXe" firstAttribute="leading" secondItem="4qk-I5-YsI" secondAttribute="leading" constant="123" id="FSf-FM-HSW"/>
+                            <constraint firstItem="HMH-5r-NSX" firstAttribute="top" secondItem="4qk-I5-YsI" secondAttribute="top" id="S3f-Hb-cPM"/>
+                            <constraint firstItem="HMH-5r-NSX" firstAttribute="leading" secondItem="jkc-GH-9Rn" secondAttribute="leading" id="VCE-2Z-aiJ"/>
+                            <constraint firstItem="4qk-I5-YsI" firstAttribute="bottom" secondItem="F2J-o1-nXe" secondAttribute="bottom" constant="328" id="XHE-ak-Gye"/>
+                            <constraint firstItem="Rg3-Dy-t0Y" firstAttribute="trailing" secondItem="jkc-GH-9Rn" secondAttribute="trailing" id="cGG-Od-2Qe"/>
+                            <constraint firstItem="HMH-5r-NSX" firstAttribute="leading" secondItem="3se-qz-xqx" secondAttribute="leadingMargin" id="k5a-uC-9Bg"/>
+                            <constraint firstItem="F2J-o1-nXe" firstAttribute="top" secondItem="jkc-GH-9Rn" secondAttribute="bottom" constant="78" id="lce-Vj-m0v"/>
+                            <constraint firstItem="HMH-5r-NSX" firstAttribute="baseline" secondItem="Rg3-Dy-t0Y" secondAttribute="baseline" id="sZU-o3-Rro"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="LivesLabel" destination="HMH-5r-NSX" id="TTg-aU-wML"/>
                         <outlet property="ScoreLabel" destination="Rg3-Dy-t0Y" id="ZLx-mN-u02"/>
+                        <outlet property="StartButton" destination="F2J-o1-nXe" id="xmx-qO-0qX"/>
+                        <outlet property="StartLabel" destination="jkc-GH-9Rn" id="rhr-tG-agv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138" y="4"/>
+            <point key="canvasLocation" x="136.74418604651163" y="3.8626609442060089"/>
         </scene>
     </scenes>
     <resources>
