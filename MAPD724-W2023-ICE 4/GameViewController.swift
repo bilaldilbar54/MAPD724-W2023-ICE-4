@@ -10,25 +10,13 @@ class GameViewController: UIViewController
     @IBOutlet weak var ScoreLabel: UILabel!
     @IBOutlet weak var StartLabel: UILabel!
     @IBOutlet weak var StartButton: UIButton!
+    @IBOutlet weak var EndLabel: UILabel!
+    @IBOutlet weak var RestartButton: UIButton!
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
         presentStartScene()
-        if let scene = GKScene(fileNamed: "GameScene")
-        {
-            // Get the SKScene from the loaded GKScene
-            if let sceneNode = scene.rootNode as! GameScene? {
-                // Set the scale mode to scale to fit the window
-                sceneNode.scaleMode = .aspectFill
-                // Present the scene
-                if let view = self.view as! SKView?
-                {
-                    view.presentScene(sceneNode)
-                    view.ignoresSiblingOrder = true
-                }
-            }
-        }
         
         CollisionManager.gameViewController = self
     }
@@ -80,7 +68,11 @@ class GameViewController: UIViewController
     
     func presentEndScene()
     {
-        
+        ScoreLabel.isHidden = true
+        LivesLabel.isHidden = true
+        RestartButton.isHidden = false
+        EndLabel.isHidden = false
+        setScene(sceneName: "EndScene")
     }
     
     @IBAction func StartButton_Pressed(_ sender: UIButton)
@@ -89,6 +81,21 @@ class GameViewController: UIViewController
         LivesLabel.isHidden = false
         StartLabel.isHidden = true
         StartButton.isHidden = true
+        
+        //Initialize the Lives & Score
+        ScoreManager.Score = 0
+        ScoreManager.Lives = 5
+        updateLivesLabel()
+        updateScoreLabel()
+        setScene(sceneName: "GameScene")
+    }
+    
+    @IBAction func RestartButton_Pressed(_ sender: UIButton)
+    {
+        RestartButton.isHidden = true
+        EndLabel.isHidden = true
+        ScoreLabel.isHidden = false
+        LivesLabel.isHidden = false
         
         //Initialize the Lives & Score
         ScoreManager.Score = 0
